@@ -7,6 +7,12 @@ The task focuses on **global consistency checking** between a *hypothetical back
 
 Our approach goes beyond conventional RAG or long-context Transformers by explicitly modeling **causal and social structure** in narratives using **graph-based reasoning inspired by the Baby Dragon Hatchling (BDH) architecture**.
 
+<div align="center">
+  <img src="<img width="407" height="376" alt="image" src="https://github.com/user-attachments/assets/58137765-a520-408c-b7da-0e947b9b0d14" />
+" alt="BDH Architecture" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover;">
+</div>
+
+
 ---
 
 ## 🚀 Problem Overview (Track B)
