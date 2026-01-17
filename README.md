@@ -23,6 +23,8 @@ Predict a binary label:
 **Key Challenge:**  
 Transformers struggle to maintain **long-range state constraints** across very long documents. Most of the text is *noise*, while only a small subset contains **causal signals** that determine consistency.
 
+![alt text](image.png)
+
 ---
 
 ## 💡 Why Track B?
@@ -40,6 +42,8 @@ We treat a narrative as a **dynamic causal graph**, not just text.
 - **Interactions & events = Edges**
 - **Contradictions = Structural violations in graph state**
 
+![github](<WhatsApp Image 2026-01-16 at 12.58.47 PM.jpeg>)
+
 By fusing:
 - Semantic understanding (embeddings),
 - Logical reasoning (NLI),
@@ -49,7 +53,9 @@ we build a system that **reasons about narratives**, rather than merely scoring 
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture   
+
+![alt text](<WhatsApp Image 2026-01-16 at 10.18.57 PM.jpeg>)
 
 ### 1. Data Ingestion (Pathway)
 - Streams large narrative files (local or Google Drive)
@@ -78,22 +84,42 @@ we build a system that **reasons about narratives**, rather than merely scoring 
   - Contradiction
   - Neutral
 
+![alt text](<WhatsApp Image 2026-01-16 at 10.22.51 PM.jpeg>)
+
 ---
 
 ## 🔀 Graph Fusion Module
 
 A **gated fusion mechanism** dynamically decides:
-- When to trust **semantic/NLI signals**
-- When to rely on **structural graph constraints**
 
-This acts as a **structural veto system**:
-- Semantic ambiguity → resolved by graph topology
-- Local events → filtered as noise
-- Causal events → reflected as graph changes
+- When to trust **high-dimensional semantic embeddings (Branch A)**
+- When to rely on **graph-derived topological features (Branch B)**
+
+This acts as a **structural arbitration system**:
+- Semantic ambiguity → resolved via graph topology
+- Spurious local correlations → suppressed by structural context
+- Causal or persistent patterns → reinforced through graph signals
+
+The fusion is governed by a **learnable gate**:
+
+$$h_{fused} = \sigma(W_g \cdot [x_{emb}, f_{graph}]) \odot x_{emb} + (1 - \sigma(W_g \cdot [x_{emb}, f_{graph}])) \odot f_{graph}$$
+
+**Where:**
+- $x_{emb}$ denotes the semantic embedding vector
+- $f_{graph}$ denotes the graph-based structural feature vector
+- $W_g$ is a learnable gating matrix
+- $\sigma(\cdot)$ is the sigmoid activation function
+- $\odot$ represents element-wise multiplication
+
+This formulation enables **adaptive fusion**, allowing the model to shift between semantic reasoning and structural reasoning depending on confidence and context.
+
+
 
 ---
 
 ## 🐉 BDH Reasoning Core
+
+![alt text](<WhatsApp Image 2026-01-16 at 10.20.51 PM.jpeg>)
 
 We use a **Baby Dragon Hatchling–inspired model** with:
 
@@ -166,6 +192,8 @@ By combining:
 we demonstrate that **long-context reasoning is better solved by stateful graph dynamics than brute-force attention**.
 
 This architecture provides a scalable, interpretable, and production-ready blueprint for future long-context AI systems.
+
+![alt text](image-1.png)
 
 ---
 
