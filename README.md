@@ -23,7 +23,7 @@ Predict a binary label:
 **Key Challenge:**  
 Transformers struggle to maintain **long-range state constraints** across very long documents. Most of the text is *noise*, while only a small subset contains **causal signals** that determine consistency.
 
-![alt text](image.png)
+<img width="1716" height="919" alt="Screenshot 2026-01-17 200517" src="https://github.com/user-attachments/assets/b5b59de9-b2f4-42cc-9701-79cd165d7d4f" />
 
 ---
 
@@ -42,7 +42,7 @@ We treat a narrative as a **dynamic causal graph**, not just text.
 - **Interactions & events = Edges**
 - **Contradictions = Structural violations in graph state**
 
-![github](<WhatsApp Image 2026-01-16 at 12.58.47 PM.jpeg>)
+![WhatsApp Image 2026-01-16 at 12 58 47 PM](https://github.com/user-attachments/assets/2ade83a3-ae61-48fe-9d9c-61bcdde47792)
 
 By fusing:
 - Semantic understanding (embeddings),
@@ -55,7 +55,7 @@ we build a system that **reasons about narratives**, rather than merely scoring 
 
 ## 🏗️ System Architecture   
 
-![alt text](<WhatsApp Image 2026-01-16 at 10.18.57 PM.jpeg>)
+![WhatsApp Image 2026-01-16 at 10 18 57 PM](https://github.com/user-attachments/assets/7f3c7fde-fb94-4d81-9331-28a76c3908e4)
 
 ### 1. Data Ingestion (Pathway)
 - Streams large narrative files (local or Google Drive)
@@ -84,7 +84,7 @@ we build a system that **reasons about narratives**, rather than merely scoring 
   - Contradiction
   - Neutral
 
-![alt text](<WhatsApp Image 2026-01-16 at 10.22.51 PM.jpeg>)
+![WhatsApp Image 2026-01-16 at 10 22 51 PM](https://github.com/user-attachments/assets/7ac327d7-adc6-471f-b246-7083b7a9a19d)
 
 ---
 
@@ -119,7 +119,7 @@ This formulation enables **adaptive fusion**, allowing the model to shift betwee
 
 ## 🐉 BDH Reasoning Core
 
-![alt text](<WhatsApp Image 2026-01-16 at 10.20.51 PM.jpeg>)
+![WhatsApp Image 2026-01-16 at 10 20 51 PM](https://github.com/user-attachments/assets/7b1561e8-333e-4745-ae49-1f35df45df1e)
 
 We use a **Baby Dragon Hatchling–inspired model** with:
 
@@ -193,7 +193,7 @@ we demonstrate that **long-context reasoning is better solved by stateful graph 
 
 This architecture provides a scalable, interpretable, and production-ready blueprint for future long-context AI systems.
 
-![alt text](image-1.png)
+<img width="1722" height="925" alt="Screenshot 2026-01-17 200621" src="https://github.com/user-attachments/assets/b553f759-33a7-4539-ba7c-ae3ef70eff61" />
 
 ---
 
