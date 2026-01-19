@@ -158,7 +158,7 @@ This enables efficient long-context reasoning without re-reading the entire book
 - Ensemble inference across folds
 
 ### Results
-- **Training Accuracy:** 91%
+- **F1-score:** 91%
 - **Validation F1 Score:** ~87%
 - **Inference Time:** < 10 minutes (local GPU)
 - **Stability:** Low variance across folds
